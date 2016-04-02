@@ -1,7 +1,7 @@
 {
   "name": "acid-plugin-static",
   "version": "0.1.0",
-  "description": "",
+  "description": "Static template plugin for Acid",
   "main": "index.js",
   "scripts": {
     "ci": "npm run lint && npm run coverage",

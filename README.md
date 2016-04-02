@@ -1,6 +1,6 @@
 # acid-plugin-static
 
-`acid-plugin-static` is a simple plugin for the [Acid static site generator]() to create a static site from a folder of Marko templates. A structure like this:
+`acid-plugin-static` is a simple plugin for the [Acid static site generator](https://github.com/drewschrauf/ameeno-acid) to create a static site from a folder of Marko templates. A structure like this:
 
     index.marko
     about.marko
