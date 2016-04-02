@@ -4,30 +4,35 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "ci": "npm run lint && npm run coverage",
     "build": "rm -rf lib && babel src --out-dir lib",
     "test": "BABEL_ENV=test mocha --compilers js:babel-register --recursive",
-    "watch": "BABEL_ENV=test mocha -w --compilers js:babel-register --recursive"
+    "watch": "BABEL_ENV=test mocha -w --compilers js:babel-register --recursive",
+    "lint": "eslint src"
   },
   "author": "Drew Schrauf <andrew.schrauf@gmail.com>",
+  "repository": "drewschrauf/acid-plugin-static",
   "license": "ISC",
   "peerDependencies": {
-    "marko": "2.x"
+    "marko": "3.x"
   },
   "dependencies": {
     "recursive-readdir": "^1.3.0"
   },
   "devDependencies": {
-      "babel-cli": "^6.5.1",
-      "babel-core": "^6.5.2",
-      "babel-eslint": "^5.0.0",
-      "babel-plugin-rewire": "^1.0.0-beta-3",
-      "babel-preset-es2015": "^6.5.0",
-      "babel-preset-stage-0": "^6.5.0",
-      "babel-register": "^6.5.2",
-      "chai": "^3.5.0",
-      "eslint-config-defaults": "^9.0.0",
-      "mocha": "^2.4.5",
-      "sinon": "^1.17.3",
-      "sinon-chai": "^2.8.0"
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-plugin-rewire": "^1.0.0-beta-3",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.5.2",
+    "chai": "^3.5.0",
+    "eslint": "^1.10.3",
+    "eslint-config-defaults": "^9.0.0",
+    "marko": "^3.0.7",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
   }
 }
