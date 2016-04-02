@@ -4,7 +4,7 @@
   "description": "Static template plugin for Acid",
   "main": "index.js",
   "scripts": {
-    "ci": "npm run lint && npm run coverage",
+    "ci": "npm run lint && npm run test",
     "build": "rm -rf lib && babel src --out-dir lib",
     "test": "BABEL_ENV=test mocha --compilers js:babel-register --recursive",
     "watch": "BABEL_ENV=test mocha -w --compilers js:babel-register --recursive",
