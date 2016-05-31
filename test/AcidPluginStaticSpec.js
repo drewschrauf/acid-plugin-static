@@ -71,17 +71,17 @@ describe('AcidPluginStatic', () => {
     describe('#resolveTemplate', () => {
         it('should return the template path for an html route', () => {
             let a = new AcidPluginStatic({templateDir: 'dir', generateListing: true});
-            expect(a.resolver.resolveTemplate('/homepage.html')).to.contain('/homepage.marko');
+            expect(a.resolver.resolveTemplate('/homepage.html')).to.match(/homepage\.marko$/);
         });
 
         it('should return the template for an index route', () => {
             let a = new AcidPluginStatic({templateDir: 'dir', generateListing: true});
-            expect(a.resolver.resolveTemplate('/about')).to.contain('/about/index.marko');
+            expect(a.resolver.resolveTemplate('/about')).to.match(/about(?:\/|\\)index.marko/);
 
         });
         it('should return the listing template for an index route with generateListing is true', () => {
             let a = new AcidPluginStatic({templateDir: 'dir', generateListing: true});
-            expect(a.resolver.resolveTemplate('/')).to.contain('/listing.marko');
+            expect(a.resolver.resolveTemplate('/')).to.match(/listing\.marko$/);
         });
     });
 });

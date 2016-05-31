@@ -16,7 +16,7 @@ function getRouteList(templateDir) {
                 } else {
                     return path.join(p.dir, p.name + '.html');
                 }
-            }));
+            }).map(f => f.replace(/\\/, '/')));
         });
     });
 }
