@@ -1,6 +1,6 @@
 {
   "name": "acid-plugin-static",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Static template plugin for Acid",
   "main": "index.js",
   "scripts": {
